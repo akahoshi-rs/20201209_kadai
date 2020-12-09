@@ -17,7 +17,7 @@ body {
 img {
     max-width: 100%;
     height: auto;
-    vertical-align: middle;
+    vertical-align: bottom;
 }
 
 ul {
@@ -108,7 +108,6 @@ a {
    &-shadow {
     padding: 50px 25px;
     box-shadow: 0 5px 30px rgba(0,0,0,0.05);
-    text-align: center;
    }
 }
 /*header
@@ -145,6 +144,7 @@ a {
 
 /*features*/
 .features {
+    padding: 40px 0;
     &__inner {
         @include basic-inner();
         @include basic-flex();
@@ -188,7 +188,7 @@ a {
 
 /*speciality*/
 .speciality {
-    padding: 80px 100px;
+    padding: 80px 0;
 
     &__inner {
         @include basic-inner();
@@ -200,14 +200,208 @@ a {
 
     &__list {
         @include basic-flex();
+        justify-content: space-around;
         margin-top: 60px;
     }
 
     &__item {
         width: 30%;
+        text-align: center;
     }
 }
 
+/*choose*/
+.choose {
+    background-color: #F7FAFF;
+    padding: 80px 0;
+
+    &__inner {
+        @include basic-inner();
+    }
+
+    &__info {
+        @include lead-width();
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        @include basic-flex();
+    }
+
+    &__item {
+        width: 48.7%;
+        margin-top: 30px;
+        padding: 30px 10px;
+        @include basic-flex();
+        justify-content: space-around;
+
+        & .card__icon {
+            margin: 0;
+        }
+
+        dl {
+            width: 70%;
+
+            dt {
+                line-height: (30/22);
+            }
+        }
+    }
+}
+
+.bring {
+    padding: 80px 0;
+    background-color: $bg-color;
+    &__inner {
+        @include basic-inner();
+    }
+
+    &__info {
+        @include lead-width();
+        margin-bottom: 50px;
+        color: $text-white;
+
+        & .media__title {
+            color: $text-white; 
+        }
+    }
+
+    & img {
+        display: block;
+        margin: 60px auto 10px;
+    }
+
+    & .button {
+        background-color: transparent;
+        border: 1px solid #fff;
+    }
+}
+
+.what {
+    padding: 80px 0;
+
+    &__inner {
+        @include basic-inner();
+    }
+
+    &__info {
+        @include lead-width();
+        margin-bottom: 80px;
+    }
+
+    &__list {
+        @include basic-flex();
+        justify-content: space-evenly;
+    }
+
+    &__item {
+        width: 27.3%;
+        text-align: center;
+
+        & .button {
+            background-color: #2DBE61;
+            box-shadow: 0 5px 10px rgba(22, 132, 61, 0.1);
+        }
+    }
+}
+
+.secure {
+    padding: 80px 0;
+
+    &__inner {
+        @include basic-inner();
+    }
+
+    &__info {
+        @include lead-width();
+        margin-bottom: 80px;
+    }
+
+    &__list {
+        @include basic-flex();
+        justify-content: space-evenly;
+    }
+
+    &__item {
+        width: 30%;
+        text-align: center;
+  }
+}
+
+.payment-help .payment{
+    &__inner {
+        flex-direction: row-reverse;
+    }
+
+    &__img {
+        width: 35%;
+    }
+
+    &__info {
+        width: 57.2%;
+    }
+}
+
+.question {
+    padding: 80px 0;
+    background-color: $bg-color;
+    &__inner {
+        @include basic-inner();
+    }
+
+    &__info {
+        @include lead-width();
+        margin-bottom: 50px;
+        color: $text-white;
+
+        & .media__title {
+            color: $text-white; 
+        }
+    }
+
+    & .button {
+        background-color: #F87624;
+    }
+}
+
+.frequently {
+    padding: 80px 0;
+
+    &__inner {
+        @include basic-inner();
+    }
+
+    &__info {
+        @include lead-width();
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        @include basic-flex();
+    }
+
+    &__item {
+        margin-top: 60px;
+        border: 1px solid #F1F1F1;
+        width: 23%;
+        padding: 30px 20px 20px;
+        text-align: center;
+
+        &:first-child {
+            background-color: #256BE6;
+            border: none;
+            box-shadow: rgba(0,0,0,0.1) 0 4px 18px;
+            .card__title {
+                color: #fff;
+            }
+        }
+        .card__icon {
+            width: 60px;
+            margin: 0 auto;
+        }
+
+    }
+}
 
 /*footer
 -----------------------------------------*/
